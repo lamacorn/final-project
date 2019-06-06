@@ -1,0 +1,154 @@
+<h1>
+  Customer list
+</h1>
+
+<a href="/new_customer_form">
+  Add a new customer
+</a>
+
+<hr>
+
+<table>
+  <tr>
+    <th>
+      ID
+    </th>
+
+    <th>
+      Email
+    </th>
+
+    <th>
+      Firstname
+    </th>
+
+    <th>
+      Lastname
+    </th>
+
+    <th>
+      Photo
+    </th>
+
+    <th>
+      Birthday
+    </th>
+
+    <th>
+      Address street
+    </th>
+
+    <th>
+      Address city
+    </th>
+
+    <th>
+      Address state
+    </th>
+
+    <th>
+      Address zipcode
+    </th>
+
+    <th>
+      Notes
+    </th>
+
+    <th>
+      Optin email
+    </th>
+
+    <th>
+      Optin texts
+    </th>
+
+    <th>
+      Phone
+    </th>
+
+    <th>
+      Created at
+    </th>
+
+    <th>
+      Updated at
+    </th>
+
+    <th>
+    </th>
+  </tr>
+
+  <% @customers.each do |customer| %>
+  <tr>
+    <td>
+      <%= customer.id %>
+    </td>
+
+    <td>
+      <%= customer.email %>
+    </td>
+
+    <td>
+      <%= customer.firstname %>
+    </td>
+
+    <td>
+      <%= customer.lastname %>
+    </td>
+
+    <td>
+      <%= customer.photo %>
+    </td>
+
+    <td>
+      <%= customer.birthday %>
+    </td>
+
+    <td>
+      <%= customer.address_street %>
+    </td>
+
+    <td>
+      <%= customer.address_city %>
+    </td>
+
+    <td>
+      <%= customer.address_state %>
+    </td>
+
+    <td>
+      <%= customer.address_zipcode %>
+    </td>
+
+    <td>
+      <%= customer.notes %>
+    </td>
+
+    <td>
+      <%= customer.optin_email %>
+    </td>
+
+    <td>
+      <%= customer.optin_texts %>
+    </td>
+
+    <td>
+      <%= customer.phone %>
+    </td>
+
+    <td>
+      <%= time_ago_in_words(customer.created_at) %> ago
+    </td>
+
+    <td>
+      <%= time_ago_in_words(customer.updated_at) %> ago
+    </td>
+
+    <td>
+      <a href="/customers/<%= customer.id %>">
+        Show details
+      </a>
+    </td>
+  </tr>
+  <% end %>
+</table>

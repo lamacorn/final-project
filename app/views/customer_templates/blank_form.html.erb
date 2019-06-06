@@ -1,0 +1,121 @@
+<h1>
+  Add a new customer
+</h1>
+
+<hr>
+
+<%= render("customer_templates/validation_failures.html.erb") %>
+
+<form action="/insert_customer_record" method="post">
+  <div>
+    <label for="email">
+      Email
+    </label>
+
+    <input type="text" id="email" name="email" value="<%= @customer.email %>">
+  </div>
+
+  <div>
+    <label for="firstname">
+      Firstname
+    </label>
+
+    <input type="text" id="firstname" name="firstname" value="<%= @customer.firstname %>">
+  </div>
+
+  <div>
+    <label for="lastname">
+      Lastname
+    </label>
+
+    <input type="text" id="lastname" name="lastname" value="<%= @customer.lastname %>">
+  </div>
+
+  <div>
+    <label for="photo">
+      Photo
+    </label>
+
+    <input type="text" id="photo" name="photo" value="<%= @customer.photo %>">
+  </div>
+
+  <div>
+    <label for="birthday">
+      Birthday
+    </label>
+
+    <input type="text" id="birthday" name="birthday" value="<%= @customer.birthday %>">
+  </div>
+
+  <div>
+    <label for="address_street">
+      Address street
+    </label>
+
+    <input type="text" id="address_street" name="address_street" value="<%= @customer.address_street %>">
+  </div>
+
+  <div>
+    <label for="address_city">
+      Address city
+    </label>
+
+    <input type="text" id="address_city" name="address_city" value="<%= @customer.address_city %>">
+  </div>
+
+  <div>
+    <label for="address_state">
+      Address state
+    </label>
+
+    <input type="text" id="address_state" name="address_state" value="<%= @customer.address_state %>">
+  </div>
+
+  <div>
+    <label for="address_zipcode">
+      Address zipcode
+    </label>
+
+    <input type="text" id="address_zipcode" name="address_zipcode" value="<%= @customer.address_zipcode %>">
+  </div>
+
+  <div>
+    <label for="notes">
+      Notes
+    </label>
+
+    <textarea id="notes" name="notes"><%= @customer.notes %></textarea>
+  </div>
+
+  <div>
+    <input id="optin_email" name="optin_email" type="checkbox" <%= "checked" if @customer.optin_email %>>
+    <label for="optin_email">
+      Optin email
+    </label>
+  </div>
+
+  <div>
+    <input id="optin_texts" name="optin_texts" type="checkbox" <%= "checked" if @customer.optin_texts %>>
+    <label for="optin_texts">
+      Optin texts
+    </label>
+  </div>
+
+  <div>
+    <label for="phone">
+      Phone
+    </label>
+
+    <input type="text" id="phone" name="phone" value="<%= @customer.phone %>">
+  </div>
+
+  <button>
+    Create customer
+  </button>
+</form>
+
+<hr>
+
+<a href="/customers">
+  Go back
+</a>

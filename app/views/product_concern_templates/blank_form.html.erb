@@ -1,0 +1,42 @@
+<h1>
+  Add a new product concern
+</h1>
+
+<hr>
+
+<%= render("product_concern_templates/validation_failures.html.erb") %>
+
+<form action="/insert_product_concern_record" method="post">
+  <div>
+    <label for="concern_id">
+      Concern
+    </label>
+
+    <input type="text" id="concern_id" name="concern_id" value="<%= @product_concern.concern_id %>">
+  </div>
+
+  <div>
+    <label for="product_id">
+      Product
+    </label>
+
+    <input type="text" id="product_id" name="product_id" value="<%= @product_concern.product_id %>">
+  </div>
+
+  <div>
+    <input id="good_for" name="good_for" type="checkbox" <%= "checked" if @product_concern.good_for %>>
+    <label for="good_for">
+      Good for
+    </label>
+  </div>
+
+  <button>
+    Create product concern
+  </button>
+</form>
+
+<hr>
+
+<a href="/product_concerns">
+  Go back
+</a>

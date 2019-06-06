@@ -1,0 +1,61 @@
+<h1>
+  Product concern #<%= @product_concern.id %> details
+</h1>
+
+<div>
+  <div>
+    <a href="/product_concerns">
+      Go back
+    </a>
+  </div>
+
+  <div>
+    <a href="/existing_product_concern_form/<%= @product_concern.id %>">
+      Edit product concern
+    </a>
+  </div>
+
+  <div>
+    <a href="/delete_product_concern/<%= @product_concern.id %>">
+      Delete product concern
+    </a>
+  </div>
+</div>
+
+<dl>
+  <dt>
+    Concern
+  </dt>
+  <dd>
+    <%= @product_concern.concern_id %>
+  </dd>
+
+  <dt>
+    Product
+  </dt>
+  <dd>
+    <%= @product_concern.product_id %>
+  </dd>
+
+  <dt>
+    Good for
+  </dt>
+  <dd>
+    <%= @product_concern.good_for %>
+  </dd>
+
+  <dt>
+    Created at
+  </dt>
+  <dd>
+    <%= time_ago_in_words(@product_concern.created_at) %> ago
+  </dd>
+
+  <dt>
+    Updated at
+  </dt>
+  <dd>
+    <%= time_ago_in_words(@product_concern.updated_at) %> ago
+  </dd>
+</dl>
+

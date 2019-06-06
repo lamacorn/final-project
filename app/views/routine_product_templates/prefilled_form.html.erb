@@ -1,0 +1,51 @@
+<h1>
+  Edit routine product #<%= @routine_product.id %>
+</h1>
+
+<hr>
+
+<%= render("routine_product_templates/validation_failures.html.erb") %>
+
+<form action="/update_routine_product_record/<%= @routine_product.id %>" method="post">
+  <div>
+    <label for="routine_id">
+      Routine
+    </label>
+
+    <input type="text" id="routine_id" name="routine_id" value="<%= @routine_product.routine_id %>">
+  </div>
+
+  <div>
+    <label for="product_id">
+      Product
+    </label>
+
+    <input type="text" id="product_id" name="product_id" value="<%= @routine_product.product_id %>">
+  </div>
+
+  <div>
+    <label for="use_frequency_id">
+      Use frequency
+    </label>
+
+    <input type="text" id="use_frequency_id" name="use_frequency_id" value="<%= @routine_product.use_frequency_id %>">
+  </div>
+
+  <div>
+    <label for="note">
+      Note
+    </label>
+
+    <textarea id="note" name="note" rows="3"><%= @routine_product.note %></textarea>
+  </div>
+
+  <button>
+    Update routine product
+  </button>
+</form>
+
+<hr>
+
+<a href="/routine_products">
+  Go back
+</a>

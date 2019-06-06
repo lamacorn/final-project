@@ -1,0 +1,131 @@
+<h1>
+  Customer #<%= @customer.id %> details
+</h1>
+
+<div>
+  <div>
+    <a href="/customers">
+      Go back
+    </a>
+  </div>
+
+  <div>
+    <a href="/existing_customer_form/<%= @customer.id %>">
+      Edit customer
+    </a>
+  </div>
+
+  <div>
+    <a href="/delete_customer/<%= @customer.id %>">
+      Delete customer
+    </a>
+  </div>
+</div>
+
+<dl>
+  <dt>
+    Email
+  </dt>
+  <dd>
+    <%= @customer.email %>
+  </dd>
+
+  <dt>
+    Firstname
+  </dt>
+  <dd>
+    <%= @customer.firstname %>
+  </dd>
+
+  <dt>
+    Lastname
+  </dt>
+  <dd>
+    <%= @customer.lastname %>
+  </dd>
+
+  <dt>
+    Photo
+  </dt>
+  <dd>
+    <%= @customer.photo %>
+  </dd>
+
+  <dt>
+    Birthday
+  </dt>
+  <dd>
+    <%= @customer.birthday %>
+  </dd>
+
+  <dt>
+    Address street
+  </dt>
+  <dd>
+    <%= @customer.address_street %>
+  </dd>
+
+  <dt>
+    Address city
+  </dt>
+  <dd>
+    <%= @customer.address_city %>
+  </dd>
+
+  <dt>
+    Address state
+  </dt>
+  <dd>
+    <%= @customer.address_state %>
+  </dd>
+
+  <dt>
+    Address zipcode
+  </dt>
+  <dd>
+    <%= @customer.address_zipcode %>
+  </dd>
+
+  <dt>
+    Notes
+  </dt>
+  <dd>
+    <%= @customer.notes %>
+  </dd>
+
+  <dt>
+    Optin email
+  </dt>
+  <dd>
+    <%= @customer.optin_email %>
+  </dd>
+
+  <dt>
+    Optin texts
+  </dt>
+  <dd>
+    <%= @customer.optin_texts %>
+  </dd>
+
+  <dt>
+    Phone
+  </dt>
+  <dd>
+    <%= @customer.phone %>
+  </dd>
+
+  <dt>
+    Created at
+  </dt>
+  <dd>
+    <%= time_ago_in_words(@customer.created_at) %> ago
+  </dd>
+
+  <dt>
+    Updated at
+  </dt>
+  <dd>
+    <%= time_ago_in_words(@customer.updated_at) %> ago
+  </dd>
+</dl>
+

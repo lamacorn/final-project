@@ -1,0 +1,58 @@
+<h1>
+  Usefrequency list
+</h1>
+
+<a href="/new_usefrequency_form">
+  Add a new usefrequency
+</a>
+
+<hr>
+
+<table>
+  <tr>
+    <th>
+      ID
+    </th>
+
+    <th>
+      Description
+    </th>
+
+    <th>
+      Created at
+    </th>
+
+    <th>
+      Updated at
+    </th>
+
+    <th>
+    </th>
+  </tr>
+
+  <% @usefrequencies.each do |usefrequency| %>
+  <tr>
+    <td>
+      <%= usefrequency.id %>
+    </td>
+
+    <td>
+      <%= usefrequency.description %>
+    </td>
+
+    <td>
+      <%= time_ago_in_words(usefrequency.created_at) %> ago
+    </td>
+
+    <td>
+      <%= time_ago_in_words(usefrequency.updated_at) %> ago
+    </td>
+
+    <td>
+      <a href="/usefrequencies/<%= usefrequency.id %>">
+        Show details
+      </a>
+    </td>
+  </tr>
+  <% end %>
+</table>

@@ -1,0 +1,47 @@
+<h1>
+  Usefrequency #<%= @usefrequency.id %> details
+</h1>
+
+<div>
+  <div>
+    <a href="/usefrequencies">
+      Go back
+    </a>
+  </div>
+
+  <div>
+    <a href="/existing_usefrequency_form/<%= @usefrequency.id %>">
+      Edit usefrequency
+    </a>
+  </div>
+
+  <div>
+    <a href="/delete_usefrequency/<%= @usefrequency.id %>">
+      Delete usefrequency
+    </a>
+  </div>
+</div>
+
+<dl>
+  <dt>
+    Description
+  </dt>
+  <dd>
+    <%= @usefrequency.description %>
+  </dd>
+
+  <dt>
+    Created at
+  </dt>
+  <dd>
+    <%= time_ago_in_words(@usefrequency.created_at) %> ago
+  </dd>
+
+  <dt>
+    Updated at
+  </dt>
+  <dd>
+    <%= time_ago_in_words(@usefrequency.updated_at) %> ago
+  </dd>
+</dl>
+

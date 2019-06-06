@@ -1,0 +1,59 @@
+<h1>
+  Edit product #<%= @product.id %>
+</h1>
+
+<hr>
+
+<%= render("product_templates/validation_failures.html.erb") %>
+
+<form action="/update_product_record/<%= @product.id %>" method="post">
+  <div>
+    <label for="name">
+      Name
+    </label>
+
+    <input type="text" id="name" name="name" value="<%= @product.name %>">
+  </div>
+
+  <div>
+    <label for="category_id">
+      Category
+    </label>
+
+    <input type="text" id="category_id" name="category_id" value="<%= @product.category_id %>">
+  </div>
+
+  <div>
+    <label for="average_price">
+      Average price
+    </label>
+
+    <input type="text" id="average_price" name="average_price" value="<%= @product.average_price %>">
+  </div>
+
+  <div>
+    <label for="product_image">
+      Product image
+    </label>
+
+    <input type="text" id="product_image" name="product_image" value="<%= @product.product_image %>">
+  </div>
+
+  <div>
+    <label for="purchase_link">
+      Purchase link
+    </label>
+
+    <input type="text" id="purchase_link" name="purchase_link" value="<%= @product.purchase_link %>">
+  </div>
+
+  <button>
+    Update product
+  </button>
+</form>
+
+<hr>
+
+<a href="/products">
+  Go back
+</a>

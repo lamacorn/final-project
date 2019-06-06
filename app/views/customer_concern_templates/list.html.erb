@@ -1,0 +1,66 @@
+<h1>
+  Customer concern list
+</h1>
+
+<a href="/new_customer_concern_form">
+  Add a new customer concern
+</a>
+
+<hr>
+
+<table>
+  <tr>
+    <th>
+      ID
+    </th>
+
+    <th>
+      Concern
+    </th>
+
+    <th>
+      Customer
+    </th>
+
+    <th>
+      Created at
+    </th>
+
+    <th>
+      Updated at
+    </th>
+
+    <th>
+    </th>
+  </tr>
+
+  <% @customer_concerns.each do |customer_concern| %>
+  <tr>
+    <td>
+      <%= customer_concern.id %>
+    </td>
+
+    <td>
+      <%= customer_concern.concern_id %>
+    </td>
+
+    <td>
+      <%= customer_concern.customer_id %>
+    </td>
+
+    <td>
+      <%= time_ago_in_words(customer_concern.created_at) %> ago
+    </td>
+
+    <td>
+      <%= time_ago_in_words(customer_concern.updated_at) %> ago
+    </td>
+
+    <td>
+      <a href="/customer_concerns/<%= customer_concern.id %>">
+        Show details
+      </a>
+    </td>
+  </tr>
+  <% end %>
+</table>

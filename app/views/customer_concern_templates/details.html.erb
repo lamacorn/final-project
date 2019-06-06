@@ -1,0 +1,54 @@
+<h1>
+  Customer concern #<%= @customer_concern.id %> details
+</h1>
+
+<div>
+  <div>
+    <a href="/customer_concerns">
+      Go back
+    </a>
+  </div>
+
+  <div>
+    <a href="/existing_customer_concern_form/<%= @customer_concern.id %>">
+      Edit customer concern
+    </a>
+  </div>
+
+  <div>
+    <a href="/delete_customer_concern/<%= @customer_concern.id %>">
+      Delete customer concern
+    </a>
+  </div>
+</div>
+
+<dl>
+  <dt>
+    Concern
+  </dt>
+  <dd>
+    <%= @customer_concern.concern_id %>
+  </dd>
+
+  <dt>
+    Customer
+  </dt>
+  <dd>
+    <%= @customer_concern.customer_id %>
+  </dd>
+
+  <dt>
+    Created at
+  </dt>
+  <dd>
+    <%= time_ago_in_words(@customer_concern.created_at) %> ago
+  </dd>
+
+  <dt>
+    Updated at
+  </dt>
+  <dd>
+    <%= time_ago_in_words(@customer_concern.updated_at) %> ago
+  </dd>
+</dl>
+

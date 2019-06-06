@@ -1,0 +1,74 @@
+<h1>
+  Concern list
+</h1>
+
+<a href="/new_concern_form">
+  Add a new concern
+</a>
+
+<hr>
+
+<table>
+  <tr>
+    <th>
+      ID
+    </th>
+
+    <th>
+      Name
+    </th>
+
+    <th>
+      Description
+    </th>
+
+    <th>
+      Example photo
+    </th>
+
+    <th>
+      Created at
+    </th>
+
+    <th>
+      Updated at
+    </th>
+
+    <th>
+    </th>
+  </tr>
+
+  <% @concerns.each do |concern| %>
+  <tr>
+    <td>
+      <%= concern.id %>
+    </td>
+
+    <td>
+      <%= concern.name %>
+    </td>
+
+    <td>
+      <%= concern.description %>
+    </td>
+
+    <td>
+      <%= concern.example_photo %>
+    </td>
+
+    <td>
+      <%= time_ago_in_words(concern.created_at) %> ago
+    </td>
+
+    <td>
+      <%= time_ago_in_words(concern.updated_at) %> ago
+    </td>
+
+    <td>
+      <a href="/concerns/<%= concern.id %>">
+        Show details
+      </a>
+    </td>
+  </tr>
+  <% end %>
+</table>

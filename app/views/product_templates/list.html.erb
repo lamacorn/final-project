@@ -1,0 +1,90 @@
+<h1>
+  Product list
+</h1>
+
+<a href="/new_product_form">
+  Add a new product
+</a>
+
+<hr>
+
+<table>
+  <tr>
+    <th>
+      ID
+    </th>
+
+    <th>
+      Name
+    </th>
+
+    <th>
+      Category
+    </th>
+
+    <th>
+      Average price
+    </th>
+
+    <th>
+      Product image
+    </th>
+
+    <th>
+      Purchase link
+    </th>
+
+    <th>
+      Created at
+    </th>
+
+    <th>
+      Updated at
+    </th>
+
+    <th>
+    </th>
+  </tr>
+
+  <% @products.each do |product| %>
+  <tr>
+    <td>
+      <%= product.id %>
+    </td>
+
+    <td>
+      <%= product.name %>
+    </td>
+
+    <td>
+      <%= product.category_id %>
+    </td>
+
+    <td>
+      <%= product.average_price %>
+    </td>
+
+    <td>
+      <%= product.product_image %>
+    </td>
+
+    <td>
+      <%= product.purchase_link %>
+    </td>
+
+    <td>
+      <%= time_ago_in_words(product.created_at) %> ago
+    </td>
+
+    <td>
+      <%= time_ago_in_words(product.updated_at) %> ago
+    </td>
+
+    <td>
+      <a href="/products/<%= product.id %>">
+        Show details
+      </a>
+    </td>
+  </tr>
+  <% end %>
+</table>

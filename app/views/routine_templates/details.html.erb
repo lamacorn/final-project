@@ -1,0 +1,61 @@
+<h1>
+  Routine #<%= @routine.id %> details
+</h1>
+
+<div>
+  <div>
+    <a href="/routines">
+      Go back
+    </a>
+  </div>
+
+  <div>
+    <a href="/existing_routine_form/<%= @routine.id %>">
+      Edit routine
+    </a>
+  </div>
+
+  <div>
+    <a href="/delete_routine/<%= @routine.id %>">
+      Delete routine
+    </a>
+  </div>
+</div>
+
+<dl>
+  <dt>
+    Customer
+  </dt>
+  <dd>
+    <%= @routine.customer_id %>
+  </dd>
+
+  <dt>
+    Active
+  </dt>
+  <dd>
+    <%= @routine.active %>
+  </dd>
+
+  <dt>
+    Createdby
+  </dt>
+  <dd>
+    <%= @routine.createdby_id %>
+  </dd>
+
+  <dt>
+    Created at
+  </dt>
+  <dd>
+    <%= time_ago_in_words(@routine.created_at) %> ago
+  </dd>
+
+  <dt>
+    Updated at
+  </dt>
+  <dd>
+    <%= time_ago_in_words(@routine.updated_at) %> ago
+  </dd>
+</dl>
+

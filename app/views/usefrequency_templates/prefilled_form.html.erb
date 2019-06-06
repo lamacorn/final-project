@@ -1,0 +1,27 @@
+<h1>
+  Edit usefrequency #<%= @usefrequency.id %>
+</h1>
+
+<hr>
+
+<%= render("usefrequency_templates/validation_failures.html.erb") %>
+
+<form action="/update_usefrequency_record/<%= @usefrequency.id %>" method="post">
+  <div>
+    <label for="description">
+      Description
+    </label>
+
+    <input type="text" id="description" name="description" value="<%= @usefrequency.description %>">
+  </div>
+
+  <button>
+    Update usefrequency
+  </button>
+</form>
+
+<hr>
+
+<a href="/usefrequencies">
+  Go back
+</a>

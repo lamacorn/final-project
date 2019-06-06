@@ -1,0 +1,74 @@
+<h1>
+  Routine list
+</h1>
+
+<a href="/new_routine_form">
+  Add a new routine
+</a>
+
+<hr>
+
+<table>
+  <tr>
+    <th>
+      ID
+    </th>
+
+    <th>
+      Customer
+    </th>
+
+    <th>
+      Active
+    </th>
+
+    <th>
+      Createdby
+    </th>
+
+    <th>
+      Created at
+    </th>
+
+    <th>
+      Updated at
+    </th>
+
+    <th>
+    </th>
+  </tr>
+
+  <% @routines.each do |routine| %>
+  <tr>
+    <td>
+      <%= routine.id %>
+    </td>
+
+    <td>
+      <%= routine.customer_id %>
+    </td>
+
+    <td>
+      <%= routine.active %>
+    </td>
+
+    <td>
+      <%= routine.createdby_id %>
+    </td>
+
+    <td>
+      <%= time_ago_in_words(routine.created_at) %> ago
+    </td>
+
+    <td>
+      <%= time_ago_in_words(routine.updated_at) %> ago
+    </td>
+
+    <td>
+      <a href="/routines/<%= routine.id %>">
+        Show details
+      </a>
+    </td>
+  </tr>
+  <% end %>
+</table>

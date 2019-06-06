@@ -1,0 +1,42 @@
+<h1>
+  Edit routine #<%= @routine.id %>
+</h1>
+
+<hr>
+
+<%= render("routine_templates/validation_failures.html.erb") %>
+
+<form action="/update_routine_record/<%= @routine.id %>" method="post">
+  <div>
+    <label for="customer_id">
+      Customer
+    </label>
+
+    <input type="text" id="customer_id" name="customer_id" value="<%= @routine.customer_id %>">
+  </div>
+
+  <div>
+    <input id="active" name="active" type="checkbox" value="1" <%= "checked" if @routine.active %>>
+    <label for="active">
+      Active
+    </label>
+  </div>
+
+  <div>
+    <label for="createdby_id">
+      Createdby
+    </label>
+
+    <input type="text" id="createdby_id" name="createdby_id" value="<%= @routine.createdby_id %>">
+  </div>
+
+  <button>
+    Update routine
+  </button>
+</form>
+
+<hr>
+
+<a href="/routines">
+  Go back
+</a>

@@ -1,0 +1,68 @@
+<h1>
+  Routine product #<%= @routine_product.id %> details
+</h1>
+
+<div>
+  <div>
+    <a href="/routine_products">
+      Go back
+    </a>
+  </div>
+
+  <div>
+    <a href="/existing_routine_product_form/<%= @routine_product.id %>">
+      Edit routine product
+    </a>
+  </div>
+
+  <div>
+    <a href="/delete_routine_product/<%= @routine_product.id %>">
+      Delete routine product
+    </a>
+  </div>
+</div>
+
+<dl>
+  <dt>
+    Routine
+  </dt>
+  <dd>
+    <%= @routine_product.routine_id %>
+  </dd>
+
+  <dt>
+    Product
+  </dt>
+  <dd>
+    <%= @routine_product.product_id %>
+  </dd>
+
+  <dt>
+    Use frequency
+  </dt>
+  <dd>
+    <%= @routine_product.use_frequency_id %>
+  </dd>
+
+  <dt>
+    Note
+  </dt>
+  <dd>
+    <%= @routine_product.note %>
+  </dd>
+
+  <dt>
+    Created at
+  </dt>
+  <dd>
+    <%= time_ago_in_words(@routine_product.created_at) %> ago
+  </dd>
+
+  <dt>
+    Updated at
+  </dt>
+  <dd>
+    <%= time_ago_in_words(@routine_product.updated_at) %> ago
+  </dd>
+</dl>
+

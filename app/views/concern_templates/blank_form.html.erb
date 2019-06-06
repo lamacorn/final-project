@@ -1,0 +1,43 @@
+<h1>
+  Add a new concern
+</h1>
+
+<hr>
+
+<%= render("concern_templates/validation_failures.html.erb") %>
+
+<form action="/insert_concern_record" method="post">
+  <div>
+    <label for="name">
+      Name
+    </label>
+
+    <input type="text" id="name" name="name" value="<%= @concern.name %>">
+  </div>
+
+  <div>
+    <label for="description">
+      Description
+    </label>
+
+    <textarea id="description" name="description"><%= @concern.description %></textarea>
+  </div>
+
+  <div>
+    <label for="example_photo">
+      Example photo
+    </label>
+
+    <input type="text" id="example_photo" name="example_photo" value="<%= @concern.example_photo %>">
+  </div>
+
+  <button>
+    Create concern
+  </button>
+</form>
+
+<hr>
+
+<a href="/concerns">
+  Go back
+</a>

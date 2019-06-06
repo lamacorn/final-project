@@ -1,0 +1,27 @@
+<h1>
+  Add a new usefrequency
+</h1>
+
+<hr>
+
+<%= render("usefrequency_templates/validation_failures.html.erb") %>
+
+<form action="/insert_usefrequency_record" method="post">
+  <div>
+    <label for="description">
+      Description
+    </label>
+
+    <input type="text" id="description" name="description" value="<%= @usefrequency.description %>">
+  </div>
+
+  <button>
+    Create usefrequency
+  </button>
+</form>
+
+<hr>
+
+<a href="/usefrequencies">
+  Go back
+</a>

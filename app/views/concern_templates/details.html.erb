@@ -1,0 +1,61 @@
+<h1>
+  Concern #<%= @concern.id %> details
+</h1>
+
+<div>
+  <div>
+    <a href="/concerns">
+      Go back
+    </a>
+  </div>
+
+  <div>
+    <a href="/existing_concern_form/<%= @concern.id %>">
+      Edit concern
+    </a>
+  </div>
+
+  <div>
+    <a href="/delete_concern/<%= @concern.id %>">
+      Delete concern
+    </a>
+  </div>
+</div>
+
+<dl>
+  <dt>
+    Name
+  </dt>
+  <dd>
+    <%= @concern.name %>
+  </dd>
+
+  <dt>
+    Description
+  </dt>
+  <dd>
+    <%= @concern.description %>
+  </dd>
+
+  <dt>
+    Example photo
+  </dt>
+  <dd>
+    <%= @concern.example_photo %>
+  </dd>
+
+  <dt>
+    Created at
+  </dt>
+  <dd>
+    <%= time_ago_in_words(@concern.created_at) %> ago
+  </dd>
+
+  <dt>
+    Updated at
+  </dt>
+  <dd>
+    <%= time_ago_in_words(@concern.updated_at) %> ago
+  </dd>
+</dl>
+
